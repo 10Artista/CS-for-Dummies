@@ -1,26 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Chapter_3_Solution_10
+using System;
+					
+public class Program
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.Write("Enter number: ");
-            int number = Convert.ToInt32(Console.ReadLine());
-            int a = number / 1000;
-            int b = (number / 100) % 10;
-            int c = (number / 10) % 10;
-            int d = number % 10;
-
-            Console.WriteLine("1.Sum of digits = {0}", a + b + c + d);
-            Console.WriteLine("2.Digits backwards = {3}{2}{1}{0}", a, b, c, d);
-            Console.WriteLine("3.Last digit on first place = {3}{0}{1}{2}", a, b, c, d);
-            Console.WriteLine("4.Replace third and second digit = {0}{2}{1}{3}", a, b, c, d);
-        }
-    }
-}
+	public static void Main()
+		{
+			string x = Console.ReadLine();
+			sum(x);
+			inver(x);
+			task(x);
+		}
+		static void sum(string x)
+		{
+			int sum = 0;
+			for (int i = 0; i < x.Length; i++)
+			{
+				int ele = x[i] - '0';
+				sum = sum + ele;
+			}
+		Console.WriteLine(sum);
+		}
+	
+		static void inver(string x)
+		{
+			string sum1 = "";
+			int loop = x.Length;
+			for (int j = loop - 1; j > -1; j--)
+			{	
+				sum1 = sum1 + x[j];
+			}
+			Console.WriteLine(sum1);
+		}
+		static void task(string x)
+		{
+			string str = "";
+			string sum2 = str + x[0] + x[2] + x[1] + x[3] ;
+			Console.WriteLine(sum2);
+		}
+		
+	}
