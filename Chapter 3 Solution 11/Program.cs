@@ -15,3 +15,21 @@ namespace Chapter_3_Solution_11
         }
     }
 }
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+		{
+			string Number = Console.ReadLine();
+			string Position = Console.ReadLine();
+			int Num = Int16.Parse(Number);
+			int Pos = Int16.Parse(Position);
+			string binary = Convert.ToString(Num, 2);
+			Console.WriteLine(binary);
+			Console.WriteLine(binary[Pos]);
+		}
+		
+	}
+
